@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    height: 500px;
+    background-color: #ccc;
+
+    display: flex;
+    flex-flow: row wrap;
+    /* above line is simplifed from the two lines below
+    flex-wrap: wrap;
+    flex-direction: row; */ 
+
+    /* options flex-grow, flex-flow, flex-direction, 
+    flex-wrap, flex-shrink, flex-basis,  */
+
+    /* flex-wrap: wrap, nowrap, wrap-reverse */
+
+    /* flex-direction: column, column-reverse, 
+    row, row-reverse */
+
+    justify-content: space-between;
+    /* justify-content: center, flex-end, 
+    flex-start, space-around, space-between */
+
+    align-items: flex-start;
+    /* decides virtacle positioning*/
+    /* align-items: baseline, center, 
+    flex-end, flex-start, stretch */
+
+    /* flex start starts at the top */
+
+    align-content: ;
+    /* styles the entire row inside the container */
+
+    /* align-content: center, flex-end, flex-start, 
+    space-around, space-between, stretch */
+}
+
+.item1 {
+    background-color: red;
+    order: 1;
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 30%;
+
+    justify-content: center;
+    /* justify center has no padding between items */
+
+    flex-direction: column;
+    align-items: baseline;
+    /* centers items of different heights on horizantal center */
+    align-content: space-between;
+    /* top row will be at the horizontal start
+    bottom row will be at the horizontal bottom
+    middle rows will be spaced evenly between */
+}
+
+.item2 {
+    background-color: orange;
+    order: 2;
+    display: flex;
+    flex-wrap: nowrap;
+    /* does not wrap */
+    flex-grow: 2;
+    /* grows by a value of 2 */
+    flex-direction: column-reverse;
+
+    justify-content: flex-start;
+    /* justifies content to the left */
+    align-items: center;
+    /* aligns center in the virtacle alignment */
+    align-content: center;
+    /* all the content in the container is pushed to the center */
+}
+
+.item3 {
+    background-color: yellow;
+    order: 3;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    /* wraps above */
+    flex-direction: row-reverse;
+
+    justify-content: flex-end;
+    /* content pushed to the right */
+    align-items: flex-end;
+    /* starts at the bottom or end in virtacle alignment */
+    align-content: space-around;
+    /* content is aligned vertically 
+    in the row with half size top and bottom f */
+}
+
+.item4 {
+    background-color: green;
+    order: 4;
+    display: flex;
+    flex-grow: 2;
+    flex-wrap: wrap;
+
+    justify-content: space-around;
+    /* padding on both sides for the same amount. 
+    ends are smaller then middles because only
+    one side is padded */
+    align-items: flex-start;
+    align-content: flex-end;
+}
+
+.item5 {
+    background-color: blue;
+    order: 5;
+    display: flex;
+    flex-shrink: 1;
+    /* shrinks by a value of 1 */
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+    /* no spaces on the edges but space between the items */
+    align-items: stretch;
+    /* the div or item is stretched to fill the space
+    take up entire height */
+    align-content: flex-end;
+}
+
+.item6 {
+    background-color: purple;
+    order: 6;
+    display: flex;
+    flex-flow: row wrap;
+
+    justify-content: space-evenly;
+    /* even spaces on the ends as in the middles */
+    align-items: stretch;
+    align-content: stretch;
+}
